@@ -48,7 +48,7 @@ function next() {
 }
 
 function display() {
-    compteur.innerHTML = "Victoire joueur X : " + victoryX + " <br>Victoire joueur O : " + victoryO + "<br>Égalité ☺: " + equality;
+    compteur.innerHTML = "Victoire joueur : " + victoryX + " <br>Victoire 200 IQ BOT: " + victoryO + "<br>Égalité ☺: " + equality;
     for (let i = 0; i < database.length; i++) {
         if (database[i] != "") {
             divs[i].style.backgroundColor = "wheat";
