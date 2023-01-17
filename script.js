@@ -32,7 +32,7 @@ reset()
 
 function next() {
     database = ["", "", "", "", "", "", "", "", ""]
-    compteur.innerHTML = "Victoire joueur : " + victoryX + " <br>Victoire 200 IQ BOT: " + victoryO + "<br>Égalité ☺: " + equality;
+    compteur.innerHTML = "Victoire joueur : " + victoryX + " <br>Victoire 200 iq BOT: " + victoryO + "<br>Égalité ☺: " + equality;
     for (let i = 0; i < database.length; i++) {
         divs[i].style.backgroundColor = "wheat";
         divs[i].classList.remove("apparition")
@@ -48,7 +48,7 @@ function next() {
 }
 
 function display() {
-    compteur.innerHTML = "Victoire joueur : " + victoryX + " <br>Victoire 200 IQ BOT: " + victoryO + "<br>Égalité ☺: " + equality;
+    compteur.innerHTML = "Victoire joueur : " + victoryX + " <br>Victoire 200 iq BOT: " + victoryO + "<br>Égalité ☺: " + equality;
     for (let i = 0; i < database.length; i++) {
         if (database[i] != "") {
             divs[i].style.backgroundColor = "wheat";
