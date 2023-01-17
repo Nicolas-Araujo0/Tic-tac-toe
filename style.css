@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+body {
+    font-family: Satisfy;
+    color: black;
+    background-color: pink;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    margin: 0 35%;
+    text-align: center;
+}
+#box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#box div {
+    display: flex;
+    width: 32%;
+    height: 150px;
+    background-color: wheat;
+    border: 1px solid;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+}
+#box div:hover{
+    background-color: rgba(121, 95, 67, 0.319);
+}
+
+#result{
+    font-size: 40px;
+    padding: 10px;
+}
+button{
+    width: 200px;
+    height: 75px;
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    
+}
+#buttonList{
+    display: flex;
+    margin: 3% 39%;
+    justify-content: space-between;
+}
+button:hover{
+    background-color: whitesmoke;
+    color: black;
+    transition: .5s;
+}
+h2 {
+    font-size: 50px;
+    margin: 0;
+}
+#compteur {
+    font-size: 30px;
+    padding: 20px;
+}
+
+.apparition{
+    animation: fade .5s linear;
+}
+@keyframes fade {
+    0% { color: rgba(0, 0, 0, 0); }
+    100% { color: rgba(0, 0, 0) }
+  }
+/*
+.victory{
+    background-color: yellow;
+}
+.indiceD{
+    background-color: blue;
+}
+.indiceV{
+    background-color: goldenrod;
+}*/
