@@ -17,7 +17,7 @@ function reset() {
     victoryO = 0;
     victoryX = 0;
     equality = 0;
-    compteur.innerHTML = "Victoire joueur X : " + victoryX + " <br>Victoire joueur O : " + victoryO + "<br>Égalité ☺: "  + equality;
+    compteur.innerHTML = "Victoire joueur : " + victoryX + " <br>Victoire 200 iq BOT: " + victoryO + "<br>Égalité ☺: " + equality;
     for (let i = 0; i < database.length; i++) {
         divs[i].style.backgroundColor = "wheat";
         divs[i].classList.remove("apparition")
@@ -32,7 +32,7 @@ reset()
 
 function next() {
     database = ["", "", "", "", "", "", "", "", ""]
-    compteur.textContent = "Victoire joueur X : " + victoryX + " / Victoire joueur O : " + victoryO + " / égalité : " + equality;
+    compteur.innerHTML = "Victoire joueur : " + victoryX + " <br>Victoire 200 IQ BOT: " + victoryO + "<br>Égalité ☺: " + equality;
     for (let i = 0; i < database.length; i++) {
         divs[i].style.backgroundColor = "wheat";
         divs[i].classList.remove("apparition")
@@ -48,6 +48,7 @@ function next() {
 }
 
 function display() {
+    compteur.innerHTML = "Victoire joueur X : " + victoryX + " <br>Victoire joueur O : " + victoryO + "<br>Égalité ☺: " + equality;
     for (let i = 0; i < database.length; i++) {
         if (database[i] != "") {
             divs[i].style.backgroundColor = "wheat";
@@ -195,9 +196,10 @@ function IAAutoplay() {
     gameEnded = check();
     if (gameEnded == true || boardFull > 8) {
         result();
-        if (boardFull > 8) {
+        if (boardFull > 9 && equality == equalityCount) {
             equality++
         }
+        display();  
     }
 }
 
@@ -230,9 +232,9 @@ function play(nbCase) {
 
 let a;
 function whoWin() {
-    if (a == "X") {
+    if (a == "X" && victoryX == victoryXCount) {
         victoryX++
-    } else if (a == "0") {
+    } else if (a == "0" && victoryO == victoryOCount) {
         victoryO++
     }
 }
